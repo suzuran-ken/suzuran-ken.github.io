@@ -11,5 +11,13 @@ export default defineNuxtConfig({
     }
   },
 
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: 'ja'
+      }
+    },
+  },
+
   modules: ['@nuxt/content']
 })
