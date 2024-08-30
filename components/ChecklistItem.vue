@@ -1,6 +1,6 @@
 <template>
-  <li>
-    <label>
+  <li class="py-1">
+    <label class="flex gap-2">
       <input type="checkbox" @change="onChange" v-model="checked">
       <slot />
     </label>
@@ -14,13 +14,13 @@ const prop = defineProps<{
 const emit = defineEmits<{
   change: [stamina: number],
 }>();
-emit('change', prop.stamina);
+emit('change', prop.stamina * prop.times);
 const checked = ref(false);
 function onChange() {
   if (checked.value) {
-    emit('change', 0 - prop.stamina);
+    emit('change', 0 - prop.stamina * prop.times);
   } else {
-    emit('change', prop.stamina);
+    emit('change', prop.stamina * prop.times);
   }
 }
 </script>
