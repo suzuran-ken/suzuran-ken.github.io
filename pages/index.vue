@@ -8,7 +8,7 @@
     { name: '記憶の奪還', stamina: 40, times: 1 },
     { name: '神兵試練', stamina: 40, times: 1 },
     { name: '静聴の地', stamina: 40, times: 1 },
-    { name: '楽園の盛宴', stamina: 20, times: 2 },
-    { name: '焦土の上', stamina: 20, times: 2 },
+    { name: '楽園の盛宴（2回）', stamina: 20, times: 2 },
+    { name: '焦土の上（2回）', stamina: 20, times: 2 },
   ]" />
 </template>
