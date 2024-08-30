@@ -9,6 +9,12 @@ export default {
     "./error.vue",
   ],
   theme: {
+    container: {
+      padding: {
+        DEFAULT: '1rem',
+        md: '2rem'
+      }
+    },
     extend: {},
   },
   plugins: [],
