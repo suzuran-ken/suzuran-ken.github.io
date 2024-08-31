@@ -1,6 +1,6 @@
 <template>
   <li class="py-1">
-    <label class="flex gap-2">
+    <label class="flex gap-2 items-center">
       <input type="checkbox" @change="onChange" v-model="checked">
       <slot />
     </label>
