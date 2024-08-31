@@ -5,8 +5,10 @@
   RK1:
    - スキル名: skill1
      推奨: true
+     説明: test
    - スキル名: skill2
      推奨: false
+     説明: test
 武器:
   - 装備名: test
 装具:
