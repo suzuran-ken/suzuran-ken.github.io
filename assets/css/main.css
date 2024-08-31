@@ -3,16 +3,6 @@
 @tailwind utilities;
 @layer base {
   :root {
-    @apply text-sm;
-    @apply md:text-base;
-    @apply bg-gray-100;
-  }
-  h1 {
-    @apply text-2xl;
-    @apply md:text-3xl;
-    @apply font-bold;
-    @apply py-4;
-    @apply md:py-8;
-    @apply drop-shadow;
+    @apply bg-gray-200;
   }
 }

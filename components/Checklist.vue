@@ -1,5 +1,5 @@
 <template>
-<article class="max-w-fit px-4 md:px-8 py-4 md:py-5 bg-slate-100 rounded shadow">
+<article class="max-w-fit px-4 md:px-8 py-4 md:py-5 bg-white rounded shadow-sm">
   <h2 class="text-xl md:text-xxl font-semibold py-2">デイリーチェックリスト</h2>
   <ul class="py-2">
     <ChecklistItem v-for="item in items" :stamina="item.stamina" :times="item.times" @change="change">{{ item.name }}</ChecklistItem>
