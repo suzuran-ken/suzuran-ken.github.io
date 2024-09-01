@@ -40,6 +40,7 @@ type SkillGroupData = {
 type CharacterData = {
   '名前': string,
   'ロール': 'ウォッチャー' | 'ディフェンダー' | 'ブレーカー' | 'アサルター' | 'デストロイヤー',
+  'レア度': 'N' | 'R' | 'SR' | 'SSR',
   '実装日': 'string',
   '概要': string,
   '個性': string,
