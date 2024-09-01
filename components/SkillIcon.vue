@@ -3,21 +3,9 @@
 </template>
 
 <script setup lang="ts">
+import img from '~/assets/json/skill.json';
 defineProps<{
   name: string
 }>();
-const file: Record<string, string> = {
-  '荘厳': 'zhuangyan.png',
-  '騎士精神': 'qishijingshen.png',
-  '聖槍技・輝': 'shenxianshizu.png',
-  '聖槍ロンギヌス': 'shengqiangtouzhi.png',
-  '正面防御': 'zhengmianfangyu.png',
-  'カウンター': 'huiji.png',
-  '反撃態勢': 'fanjizitai.png',
-  '正義の誓い': 'shengqishituan.png',
-  '正義を貫く槍': 'shengqiangzhanji.png',
-  '沈黙の一撃': 'jinzhan_chenmoji.png',
-  '公正な決闘': 'gongzhengjuedong.png',
-  '騎士の栄光': 'qishiderongyao.png'
-};
+const file: Record<string, string> = img;
 </script>

@@ -4,13 +4,10 @@
   </div>
 </template>
 <script setup lang="ts">
+import img from '~/assets/json/characterDotImg.json';
 const prop = defineProps<{
   name: string
 }>();
-const file: Record<string, string> = {
-  'シモーナ': 'character_hknightsicemagefset01.png',
-  'グロリア': 'character_hknightspaladinfset01.png',
-  'サフィア': 'character_hpoliceleaderfset01.png'
-};
+const file: Record<string, string> = img;
 const src = file[prop.name];
 </script>
