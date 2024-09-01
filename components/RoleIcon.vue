@@ -1,5 +1,5 @@
 <template>
-  <div class="w-16 h-16 flex justify-center items-center rounded-full border bg-white"><img :src="file[role]" :alt="role"></div>
+  <div class="flex justify-center items-center"><img :src="file[role]" :alt="role"></div>
 </template>
 <script setup lang="ts">
 import watcher from '~/assets/img/role/watcher.png';

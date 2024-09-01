@@ -3,7 +3,7 @@
     <h1 class="text-2xl md:text-3xl font-bold drop-shadow ">キャラクター攻略情報</h1>
     <div class="bg-white p-4 md:p-8 border-y" v-for="role in roles">
       <div class="flex items-center gap-2 mb-3 md:mb-5">
-        <RoleIcon :role="role" />
+        <RoleIcon :role="role" :class="['w-12', 'h-12']" />
         <h2 class="font-semibold text-lg md:text-xl">{{ role }}</h2>
       </div>
       <ContentList :query="queries[role]">

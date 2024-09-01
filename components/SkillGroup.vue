@@ -16,21 +16,19 @@
         </div>
       </div>
     </label>
-    <div class="grid grid-cols-2 gap-4 overflow-hidden max-h-0 peer-has-[:checked]:max-h-96 transition-all">
-      <div :class="descriptionClass">{{ leftDescription }}</div>
-      <div :class="descriptionClass">{{ rightDescription }}</div>
+    <div class="overflow-hidden max-h-0 peer-has-[:checked]:max-h-96 transition-all peer-has-[:checked]:border rounded px-4 py-2">
+      {{ reason }}
     </div>
   </div>
 </template>
 <script setup lang="ts">
-defineProps<{
+const prop = defineProps<{
   rank: number,
   left: string,
-  leftDescription?: string,
-  leftRecommended: boolean,
   right: string,
-  rightDescription?: string,
-  rightRecommended: boolean
+  recommend: string,
+  reason: string
 }>();
-const descriptionClass = ['border', 'rounded', 'p-2']
+const leftRecommended = prop.recommend.includes('左');
+const rightRecommended = prop.recommend.includes('右');
 </script>

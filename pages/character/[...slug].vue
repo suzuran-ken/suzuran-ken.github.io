@@ -1,21 +1,21 @@
 <template>
   <ContentDoc v-slot="{ doc }">
-    <div class="flex items-center gap-2">
-      <RoleIcon :role="doc['ロール']" />
+    <div class="flex items-center gap-2 py-4">
+      <RoleIcon :role="doc['ロール']" :class="['w-12', 'h-12']" />
       <h1 class="font-bold text-2xl md:text-3xl">{{ doc['名前'] }}</h1>
     </div>
-    <div class="md:flex gap-4">
-      <div class="bg-white grow">紹介テキス紹介テキスト紹介テキスト紹介テキスト紹介テキスト紹介テキスト紹介テキスト紹介テキスト紹介テキストト</div>
-      <CharacterFullImg :name="doc['名前']" />
-    </div>
+    <CharacterFullImg :name="doc['名前']" :class="['lg:absolute','lg:right-0','lg:top-0', 'drop-shadow-lg']" />
+    {{ doc['概要'] }}
     <section v-if="'スキル' in doc">
       <h2>スキル選択</h2>
       <SkillTree>
-        <SkillGroup v-for="rank in skillRanks" :rank="parseInt(rank.slice(2))"
-          :left="doc['スキル'][rank][0]['スキル名'] as string" :left-recommended="doc['スキル'][rank][0]['推奨'] as boolean"
-          :left-description="doc['スキル'][rank][0]['説明'] as string" :right="doc['スキル'][rank][1]['スキル名'] as string"
-          :right-recommended="doc['スキル'][rank][1]['推奨'] as boolean"
-          :right-description="doc['スキル'][rank][1]['説明'] as string" />
+        <template v-for="rank in skillRanks">
+          <SkillGroup v-if="rank in doc['スキル']" :rank="parseInt(rank.slice(2))"
+            :left="doc['スキル'][rank]['左'] as string"
+            :right="doc['スキル'][rank]['右'] as string"
+            :recommend="doc['スキル'][rank]['推奨'] as string"
+            :reason="doc['スキル'][rank]['理由'] as string" />
+        </template>
       </SkillTree>
     </section>
   </ContentDoc>
